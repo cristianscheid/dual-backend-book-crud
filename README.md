@@ -116,7 +116,7 @@ To get started with this project, follow the steps below:
 
 ## Usage
 
-Once the application is running, you can access it at `http://localhost:4200)`.
+Once the application is running, you can access it at `http://localhost:4200`.
 
 ## License
 
