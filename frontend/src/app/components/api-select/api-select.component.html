@@ -1,0 +1,66 @@
+<div class="flex items-center space-x-2">
+  <!-- Select API Dropdown and Button -->
+  <select
+    id="api-select"
+    (change)="changeApi($event)"
+    class="border text-sm rounded-lg p-2.5 bg-gray-700 border-gray-600 text-white focus:ring-blue-500 focus:border-blue-500"
+  >
+    <option value="laravel">Laravel</option>
+    <option value="node">Node/Express</option>
+  </select>
+
+  <button
+    (click)="testApiConnection()"
+    class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
+  >
+    Test Connection
+  </button>
+  <!-- Feedback Icons -->
+  @if (apiConnectionSuccess == true) {
+  <div
+    class="flex items-center p-3 text-sm border rounded-lg bg-green-900 border-green-700"
+    role="alert"
+  >
+    <div>
+      <svg
+        class="w-4 h-4 text-white"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M15.03 9.684h3.965c.322 0 .64.08.925.232.286.153.532.374.717.645a2.109 2.109 0 0 1 .242 1.883l-2.36 7.201c-.288.814-.48 1.355-1.884 1.355-2.072 0-4.276-.677-6.157-1.256-.472-.145-.924-.284-1.348-.404h-.115V9.478a25.485 25.485 0 0 0 4.238-5.514 1.8 1.8 0 0 1 .901-.83 1.74 1.74 0 0 1 1.21-.048c.396.13.736.397.96.757.225.36.32.788.269 1.211l-1.562 4.63ZM4.177 10H7v8a2 2 0 1 1-4 0v-6.823C3 10.527 3.527 10 4.176 10Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+  </div>
+  } @else { @if (apiConnectionSuccess == false) {
+  <div
+    class="flex items-center p-3 text-sm border rounded-lg bg-red-900 border-red-700"
+    role="alert"
+  >
+    <div>
+      <svg
+        class="w-4 h-4 text-white"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8.97 14.316H5.004c-.322 0-.64-.08-.925-.232a2.022 2.022 0 0 1-.717-.645 2.108 2.108 0 0 1-.242-1.883l2.36-7.201C5.769 3.54 5.96 3 7.365 3c2.072 0 4.276.678 6.156 1.256.473.145.925.284 1.35.404h.114v9.862a25.485 25.485 0 0 0-4.238 5.514c-.197.376-.516.67-.901.83a1.74 1.74 0 0 1-1.21.048 1.79 1.79 0 0 1-.96-.757 1.867 1.867 0 0 1-.269-1.211l1.562-4.63ZM19.822 14H17V6a2 2 0 1 1 4 0v6.823c0 .65-.527 1.177-1.177 1.177Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+  </div>
+  }}
+</div>

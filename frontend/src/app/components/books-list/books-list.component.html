@@ -1,0 +1,70 @@
+<div>
+  <div
+    class="relative mx-40 mt-8 flex overflow-x-auto shadow-md sm:rounded-lg bg-gray-700"
+  >
+    <div class="flex-1 p-4">
+      <!-- Search Bar Section -->
+      <div class="mx-auto w-full">
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+          >
+            <svg
+              class="h-4 w-4 text-gray-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <input
+            type="text"
+            id="default-search"
+            [(ngModel)]="title"
+            placeholder="Search by title"
+            class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-4 ps-10 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+          />
+          <button
+            type="button"
+            (click)="searchTitle()"
+            class="absolute end-2.5 bottom-2.5 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-800"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+      <!-- Book List Table -->
+      <table class="mt-4 w-full text-left text-sm text-gray-400">
+        <tbody>
+          @for (book of books; track book.id; let i = $index) {
+          <tr class="border-b border-gray-700 bg-gray-800 hover:bg-gray-600">
+            <th
+              [class.active]="i == currentIndex"
+              (click)="setActiveBook(book, i)"
+              scope="row"
+              class="whitespace-nowrap px-6 py-4 font-medium text-white"
+            >
+              {{ book.title }}
+            </th>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    <!-- Book Details Section -->
+    <div class="flex-1 p-4">
+      <app-book-details
+        [viewMode]="true"
+        [currentBook]="currentBook"
+      ></app-book-details>
+    </div>
+  </div>
+</div>

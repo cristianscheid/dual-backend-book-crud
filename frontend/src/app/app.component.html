@@ -1,0 +1,41 @@
+<div class="absolute inset-0 z-0 bg-gradient-to-b from-gray-900 to-gray-700">
+  <!-- Navigation: Logo & API Selector -->
+  <nav class="bg-gray-900">
+    <div
+      class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4"
+    >
+      <a href="#" class="flex items-center space-x-3">
+        <img src="assets/svg/laravel.svg" class="h-8" />
+        <span class="text-white text-xl">+</span>
+        <img src="assets/svg/node.svg" class="h-8" />
+        <img src="assets/svg/express.svg" class="h-8" />
+        <span class="text-white text-xl">+</span>
+        <img src="assets/svg/angular.svg" class="h-8" />
+      </a>
+      <div class="flex items-center space-x-4">
+        <app-api-select></app-api-select>
+      </div>
+    </div>
+  </nav>
+  <!-- Navigation: Links -->
+  <nav class="bg-gray-700">
+    <div class="max-w-screen-xl mx-auto px-4 py-3">
+      <ul class="flex flex-row items-center space-x-8 text-sm font-medium">
+        <li>
+          <a routerLink="books" class="text-white hover:underline">
+            My Books
+          </a>
+        </li>
+        <li>
+          <a routerLink="add" class="text-white hover:underline">
+            Add New Book
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Routed Content -->
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

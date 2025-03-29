@@ -1,0 +1,73 @@
+<div class="mx-auto max-w-sm text-gray-400">
+  <div>
+    @if (!submitted) {
+    <!-- Title -->
+    <h3 class="text-lg font-semibold text-white text-center my-4">
+      Add New Book
+    </h3>
+    <!-- Form -->
+    <form #bookForm="ngForm">
+      <div class="mb-5">
+        <label for="title" class="block text-sm font-medium text-white mb-2">
+          Title
+        </label>
+        <input
+          type="text"
+          id="title"
+          [(ngModel)]="book.title"
+          name="title"
+          class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label for="author" class="block text-sm font-medium text-white mb-2">
+          Author
+        </label>
+        <input
+          type="text"
+          id="author"
+          [(ngModel)]="book.author"
+          name="author"
+          class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="published-year"
+          class="block text-sm font-medium text-white mb-2"
+        >
+          Published Year
+        </label>
+        <input
+          type="number"
+          id="published-year"
+          [(ngModel)]="book.publishedYear"
+          name="published-year"
+          class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
+          required
+        />
+      </div>
+    </form>
+    <!-- Buttons and Messages -->
+    <button
+      (click)="saveBook(bookForm)"
+      class="me-2 mb-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-800"
+    >
+      Submit
+    </button>
+    <p>{{ message }}</p>
+    } @else {
+    <h3 class="text-lg font-semibold text-white text-center my-4">
+      {{ message }}
+    </h3>
+    <button
+      (click)="newBook()"
+      class="mt-4 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-800"
+    >
+      Add New Book
+    </button>
+    }
+  </div>
+</div>

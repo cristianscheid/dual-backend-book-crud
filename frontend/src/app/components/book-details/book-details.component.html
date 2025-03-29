@@ -1,0 +1,93 @@
+<div class="mt-2 text-gray-400">
+  @if (viewMode) { @if (currentBook.id) {
+  <!-- View Mode: Book Details Section -->
+  <div class="ml-4">
+    <div>
+      <label><strong>Title:</strong></label> {{ currentBook.title }}
+    </div>
+    <div>
+      <label><strong>Author:</strong></label> {{ currentBook.author }}
+    </div>
+    <div>
+      <label><strong>Published Year:</strong></label>
+      {{ currentBook.publishedYear }}
+    </div>
+
+    <a routerLink="/books/{{ currentBook.id }}">
+      <button
+        class="mt-4 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-800"
+      >
+        Edit
+      </button>
+    </a>
+  </div>
+  } @else {
+  <p>Click on a book to view its details.</p>
+  } } @else { @if (currentBook.id) {
+  <!-- Edit Mode: Book Edit Form -->
+  <div class="mx-auto max-w-sm">
+    <h3 class="text-lg font-semibold text-white text-center my-4">
+      Edit Your Book
+    </h3>
+    <form #bookForm="ngForm">
+      <div class="mb-5">
+        <label for="title" class="mb-2 block text-sm font-medium text-white">
+          Title
+        </label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          [(ngModel)]="currentBook.title"
+          class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label for="author" class="mb-2 block text-sm font-medium text-white">
+          Author
+        </label>
+        <input
+          type="text"
+          id="author"
+          name="author"
+          [(ngModel)]="currentBook.author"
+          class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+          required
+        />
+      </div>
+      <div class="mb-5">
+        <label
+          for="published-year"
+          class="mb-2 block text-sm font-medium text-white"
+        >
+          Published Year
+        </label>
+        <input
+          type="number"
+          id="published-year"
+          name="published-year"
+          [(ngModel)]="currentBook.publishedYear"
+          class="block w-full rounded-lg border border-gray-600 bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500"
+          required
+        />
+      </div>
+    </form>
+    <button
+      (click)="updateBook(bookForm)"
+      class="me-2 mb-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-800"
+    >
+      Update
+    </button>
+    <button
+      (click)="deleteBook()"
+      class="me-2 mb-2 rounded-lg bg-red-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-900"
+    >
+      Delete
+    </button>
+    <p>{{ message }}</p>
+  </div>
+  } @else {
+  <p>Cannot access this Book...</p>
+  } }
+</div>
