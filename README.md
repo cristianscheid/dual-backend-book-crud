@@ -39,7 +39,7 @@ To get started with this project, follow the steps below:
 
 2. **Set up Laravel backend environment**
 
-   - Navigate to the backend directory (`dual-backend-book-crud/backend-laravel/`).
+   - Navigate to Laravel the backend directory (`dual-backend-book-crud/backend-laravel/`).
    - Install dependencies:
 
      ```
@@ -72,7 +72,7 @@ To get started with this project, follow the steps below:
 
 3. **Set up Node backend environment**
 
-   - Navigate to the backend directory (`dual-backend-book-crud/backend-node/`).
+   - Navigate to the Node backend directory (`dual-backend-book-crud/backend-node/`).
    - Install dependencies:
 
      ```
