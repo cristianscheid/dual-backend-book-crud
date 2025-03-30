@@ -26,7 +26,7 @@ This project was developed to gain hands-on experience with Node.js and Express.
 
 ## Visuals
 
-https://github.com/user-attachments/assets/13ad992c-d922-4139-a50f-24cc3fb8f158
+https://github.com/user-attachments/assets/33b23f0b-1d17-431a-9b0a-bf5b45df12a5
 
 ## Installation
 
