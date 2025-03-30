@@ -39,6 +39,14 @@ export class ApiSelectComponent {
     if (selectElement) {
       const selectedApi = selectElement.value;
       this.bookService.setApiUrl(selectedApi);
+
+      let message = '';
+      if (selectedApi === 'laravel') {
+        message = 'Selected API: Laravel';
+      } else if (selectedApi === 'node') {
+        message = 'Selected API: Node/Express';
+      }
+      console.log(message);
     }
   }
 
