@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BooksListComponent } from './components/books-list/books-list.component';
-import { BookDetailsComponent } from './components/book-details/book-details.component';
+
 import { AddBookComponent } from './components/add-book/add-book.component';
+import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { BooksListComponent } from './components/books-list/books-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'books', pathMatch: 'full' },
