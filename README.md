@@ -2,11 +2,11 @@
 
 ## Description
 
-This project was developed to gain hands-on experience with Node.js and Express. The backend was first created as a RESTful API in Laravel, then replicated in Node.js/Express to explore the stack. It provides CRUD operations for managing book records, with the flexibility to choose between Laravel (PHP) or Node.js/Express APIs. Both backends connect to a shared SQLite database, while the Angular frontend maintains a consistent user experience, regardless of the selected backend.
+This project was developed to gain hands-on experience with Node.js and Express.js. The backend was first created as a RESTful API in Laravel, then replicated in Node.js/Express.js to explore the stack. It provides CRUD operations for managing book records, with the flexibility to choose between Laravel (PHP) or Node.js/Express.js APIs. Both backends connect to a shared SQLite database, while the Angular frontend maintains a consistent user experience, regardless of the selected backend.
 
 ### Features
 
-- Two RESTful APIs (Laravel and Node.js/Express) with equivalent routes for managing data, allowing users to choose between them via the frontend.
+- Two RESTful APIs (Laravel and Node.js/Express.js) with equivalent routes for managing data, allowing users to choose between them via the frontend.
 - Both backends utilize the same SQLite database, ensuring data consistency.
 - Angular frontend for performing CRUD operations on book records (List, Filter, Create, Update, Delete).
 
@@ -18,7 +18,7 @@ This project was developed to gain hands-on experience with Node.js and Express.
 
 ![JavaScript][javascript-badge]
 ![Node.js][nodejs-badge]
-![Express][express-badge]
+![Express.js][express-badge]
 
 ![TypeScript][typescript-badge]
 ![Angular][angular-badge]
