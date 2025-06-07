@@ -131,7 +131,7 @@ Distributed under the MIT License. See LICENSE.txt for more information.
 [sqlite-badge]: https://img.shields.io/badge/SQLite-3.37-gray?style=for-the-badge&logo=sqlite&logoColor=white
 [javascript-badge]: https://img.shields.io/badge/JavaScript-ES6-gray?style=for-the-badge&logo=javascript&logoColor=white
 [nodejs-badge]: https://img.shields.io/badge/Node.js-22.14-gray?style=for-the-badge&logo=node.js&logoColor=white
-[express-badge]: https://img.shields.io/badge/Express-4.21-gray?style=for-the-badge&logo=express&logoColor=white
+[express-badge]: https://img.shields.io/badge/Express.js-4.21-gray?style=for-the-badge&logo=express&logoColor=white
 [typescript-badge]: https://img.shields.io/badge/TypeScript-5.4-gray?style=for-the-badge&logo=typescript&logoColor=white
 [angular-badge]: https://img.shields.io/badge/Angular-17.3-gray?style=for-the-badge&logo=angular&logoColor=white
 [tailwindcss-badge]: https://img.shields.io/badge/Tailwind%20CSS-3.4-gray?style=for-the-badge&logo=tailwindcss&logoColor=white
